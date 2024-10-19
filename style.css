@@ -11,17 +11,15 @@
 .container {
     display: flex;
     justify-content: center;
-    background-color: rgb(48, 0, 0);
     & .resume-container {
-        width: 595px;
-        height: 842px;
-        background-color: white;
+        width: 8.3in;
+        height: 11.7in;
+        box-shadow: 0px 0px 2px #bfbfbf;
         & .resume-header {
             background-color: #ffd1d1;
             color: black;
             padding: 20px;
             text-align: center;
-            margin-top: 30px;
 
             & .name h1 {
                 font-family: var(--heading-font);
