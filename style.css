@@ -1,0 +1,120 @@
+:root {
+    --heading-font: Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(48, 0, 0);
+    & .resume-container {
+        width: 595px;
+        height: 842px;
+        background-color: white;
+        & .resume-header {
+            background-color: #ffd1d1;
+            color: black;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+
+            & .name h1 {
+                font-family: var(--heading-font);
+            }
+
+            & .skill h2 {
+                font-family: var(--heading-font);
+            }
+        }
+    }
+
+    & .resume-body {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px 30px 20px 30px;
+
+        & .resume-body-left {
+            flex: 3;
+            border-right: 2px solid #dadada;
+
+            & .left-sec {
+                font-family: var(--heading-font);
+                text-align: justify;
+                padding: 20px 0px 20px 0;
+                border-bottom: 2px solid #dadada;
+                margin-right: 15px;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+
+                & .section-head {
+                    padding: 0px 0 10px 0;
+                }
+
+                & .section-body {
+                    & .experience {
+                        padding-bottom: 10px;
+                    }
+
+                    & .experience .exp-section {
+                        padding: 2px 0 2px 0;
+
+                        & ul {
+                            padding: 0 0 0 30px;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        & .resume-body-right {
+            flex: 2;
+
+            & .right-sec {
+                &:last-child{
+                    border-bottom: none;
+                }
+                font-family: var(--heading-font);
+                padding: 20px 0px 20px 0;
+                border-bottom: 2px solid #dadada;
+                margin-left: 20px;
+
+                & .contact-body {
+                    padding: 5px 0 5px 0;
+                    display: flex;
+                    & i{
+                        flex: 1;
+                        text-align: center;
+                    }
+                    & p{
+                        flex: 8;
+                        padding: 0 10px;
+                    }
+                }
+
+                & .section-head {
+                    padding: 0px 0 10px 0;
+                }
+
+                & .section-body {
+                    & .education {
+                        padding-bottom: 10px;
+                    }
+                    & .education .ed-section {
+                        padding: 2px 0 2px 0;
+                    }
+                    & ul{
+                        padding-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
