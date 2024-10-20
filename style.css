@@ -6,112 +6,357 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: var(--heading-font);
+}
+
+body {
+    background-color: aliceblue;
 }
 
 .container {
     display: flex;
-    justify-content: center;
-    & .resume-container {
-        width: 8.3in;
-        height: 11.7in;
-        box-shadow: 0px 0px 2px #bfbfbf;
-        & .resume-header {
-            background-color: #ffd1d1;
-            color: black;
-            padding: 20px;
-            text-align: center;
+    flex-direction: column;
+    align-items: center;
 
-            & .name h1 {
-                font-family: var(--heading-font);
-            }
+    & .app-header {
+        background-color: white;
+        box-shadow: 0 0 5px #b6b6b6;
+        margin: 20px 0 0 0;
+        padding: 10px;
+        border-radius: 10px;
+        text-transform: uppercase;
+        text-align: center;
 
-            & .skill h2 {
-                font-family: var(--heading-font);
+        & h1 {
+            font-size: 26px;
+        }
+    }
+
+    & .section-menu {
+        background-color: white;
+        margin: 10px 0 0 0;
+        padding: 10px;
+        border-radius: 10px;
+        display: flex;
+        flex-wrap: wrap;
+
+        & .menu-item {
+            margin: 0 10px;
+            padding: 5px;
+
+            & input {
+                accent-color: #F15D67;
             }
         }
     }
 
-    & .resume-body {
+    & .app-body {
         display: flex;
-        flex-wrap: wrap;
-        padding: 20px 30px 20px 30px;
+        justify-content: center;
 
-        & .resume-body-left {
-            flex: 3;
-            border-right: 2px solid #dadada;
+        & .resumer-container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 60%;
+            box-shadow: 0 0 5px #b6b6b6;
+            margin: 10px 20px 20px 10px;
+            background-color: white;
 
-            & .left-sec {
-                font-family: var(--heading-font);
-                text-align: justify;
-                padding: 20px 0px 20px 0;
-                border-bottom: 2px solid #dadada;
-                margin-right: 15px;
+            & .left {
+                display: flex;
+                flex-direction: column;
+                padding: 30px;
+                background-color: #313F5F;
+                color: white;
+                width: 40%;
 
-                &:last-child {
-                    border-bottom: none;
+                & #header {
+                    margin: 0 0 20px 0;
+
+                    & .name {
+                        padding: 5px 0;
+                    }
                 }
 
-                & .section-head {
-                    padding: 0px 0 10px 0;
-                }
+                & #personal-details {
+                    margin: 0 0 20px 0;
 
-                & .section-body {
-                    & .experience {
-                        padding-bottom: 10px;
+                    & #email {
+                        align-items: start;
                     }
 
-                    & .experience .exp-section {
-                        padding: 2px 0 2px 0;
+                    & .detail {
+                        display: flex;
+                        align-items: center;
+                        padding: 8px 0;
 
-                        & ul {
-                            padding: 0 0 0 30px;
+                        & span {
+                            color: #F15D67;
+                            text-align: center;
+                            width: 10%;
+                        }
+
+                        & p {
+                            width: 90%;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+
+                & #profile {
+                    margin: 0 0 20px 0;
+
+                    & #profile-head {
+                        display: flex;
+                        align-items: center;
+                        border-bottom: 2px dotted #F15D67;
+                        padding: 5px 0;
+
+                        & h4 {
+                            margin-left: 10px;
+                        }
+                    }
+
+                    & #profile-body {
+                        margin: 20px 0 0 0;
+                        text-align: justify;
+                    }
+                }
+
+                & #education {
+                    margin: 0 0 20px 0;
+
+                    & #education-head {
+                        display: flex;
+                        align-items: center;
+                        border-bottom: 2px dotted #F15D67;
+                        padding: 5px 0;
+
+                        & h4 {
+                            margin-left: 10px;
+                        }
+                    }
+
+                    & #education-body {
+                        margin: 20px 0 0 0;
+
+                        & .education-item {
+                            padding: 0 0 20px 0;
+
+                            &:last-child {
+                                padding: 0;
+                            }
+
+                            & h4 {
+                                font-size: 16px;
+                                padding: 1px 0;
+                            }
+
+                            & #institute-name {
+                                font-size: 15px;
+                                padding: 1px 0;
+                            }
+
+                            & #year {
+                                font-size: 14px;
+                                padding: 1px 0;
+                            }
+                        }
+                    }
+                }
+
+                & #languages {
+
+                    & #languages-head {
+                        display: flex;
+                        align-items: center;
+                        border-bottom: 2px dotted #F15D67;
+                        padding: 5px 0;
+
+                        & h4 {
+                            margin-left: 10px;
+                        }
+                    }
+
+                    & #languages-body {
+                        margin: 20px 0 0 0;
+
+                        & .language {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding: 5px 0;
+
+                            & p {
+                                font-size: 16px;
+                            }
+
+                            & span {
+                                font-size: 12px;
+                            }
                         }
                     }
                 }
             }
 
+            & .right {
+                padding: 30px;
+                width: 60%;
+
+                & #experience {
+
+                    & #experience-head {
+                        display: flex;
+                        align-items: center;
+                        border-bottom: 2px dotted #F15D67;
+                        padding: 5px 0;
+
+                        & h4 {
+                            margin-left: 10px;
+                        }
+                    }
+
+                    & #experience-body {
+                        margin: 20px 0 0 0;
+
+                        & .organization {
+                            padding: 0 0 20px 0;
+
+                            & h4 {
+                                padding: 2px 0;
+                            }
+
+                            & p {
+                                padding: 2px 0;
+                            }
+
+                            & .key-points {
+                                & ul {
+                                    list-style-position: inside;
+
+                                    & li {
+                                        padding: 2px 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                & #skills {
+
+                    margin: 0 0 20px 0;
+
+                    & #skills-head {
+                        display: flex;
+                        align-items: center;
+                        border-bottom: 2px dotted #F15D67;
+                        padding: 5px 0;
+
+                        & h4 {
+                            margin-left: 10px;
+                        }
+                    }
+
+                    & #skills-body {
+                        margin: 20px 0 0 0;
+
+                        & .skill {
+                            display: inline-block;
+                            background-color: #F15D67;
+                            padding: 10px;
+                            color: white;
+                            border-radius: 5px;
+                            margin: 5px 0 5px 0;
+
+                            & p {
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+
+                & #awards {
+
+                    & #awards-head {
+                        display: flex;
+                        align-items: center;
+                        border-bottom: 2px dotted #F15D67;
+                        padding: 5px 0;
+
+                        & h4 {
+                            margin-left: 10px;
+                        }
+                    }
+
+                    & #awards-body {
+                        margin: 20px 0 0 0;
+
+                        & .award {
+                            margin: 20px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:991px) {
+    .container {
+        & .section-menu {
+            justify-content: center;
+            margin: 20px 10px 0px 10px;
+
+            & h1 {
+                font-size: 24px;
+            }
         }
 
-        & .resume-body-right {
-            flex: 2;
+        & .app-body {
+            justify-content: center;
 
-            & .right-sec {
-                &:last-child{
-                    border-bottom: none;
-                }
-                font-family: var(--heading-font);
-                padding: 20px 0px 20px 0;
-                border-bottom: 2px solid #dadada;
-                margin-left: 20px;
+            & .resumer-container {
+                width: 100%;
+                margin: 10px 20px 20px 20px;
+            }
+        }
+    }
+}
 
-                & .contact-body {
-                    padding: 5px 0 5px 0;
-                    display: flex;
-                    & i{
-                        flex: 1;
-                        text-align: center;
-                    }
-                    & p{
-                        flex: 8;
-                        padding: 0 10px;
-                    }
-                }
+@media screen and (max-width:620px) {
+    .container {
+        & .app-header {
+            margin: 20px 10px 0px 10px;
 
-                & .section-head {
-                    padding: 0px 0 10px 0;
-                }
+            & h1 {
+                font-size: 24px;
+            }
+        }
 
-                & .section-body {
-                    & .education {
-                        padding-bottom: 10px;
-                    }
-                    & .education .ed-section {
-                        padding: 2px 0 2px 0;
-                    }
-                    & ul{
-                        padding-left: 20px;
-                    }
+        & .app-body {
+            flex-direction: column;
+            align-items: center;
+            padding: 0 10px;
+            & .resumer-container {
+                flex-direction: column;
+                margin: 20px 0;
+                & .left {
+                    width: 100%;
                 }
+                & .right {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:467px) {
+    .container {
+        & .app-body {
+            & .resumer-container {
+                align-items: center;
             }
         }
     }

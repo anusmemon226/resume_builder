@@ -13,158 +13,193 @@
 
 <body>
     <div class="container">
-        <div class="resume-container" id="resume">
-            <div class="resume-header">
-                <div class="name">
-                    <h1>Muhammad Anus</h1>
-                </div>
-                <div class="skill">
-                    <h2>Web Developer</h2>
-                </div>
+        <div class="app-header">
+            <h1>Resume Builder Application</h1>
+        </div>
+        <div class="section-menu">
+            <div class="menu-item">
+                <input type="checkbox" name="language" data-id="languages" checked>
+                <label for="languages">Language</label>
             </div>
-            <div class="resume-body">
-                <div class="resume-body-left">
-                    <div class="left-sec">
-                        <div class="section-head">
-                            <h2>PROFILE</h2>
+            <div class="menu-item">
+                <input type="checkbox" name="skill" data-id="skills" checked>
+                <label for="skill">Skill</label>
+            </div>
+            <div class="menu-item">
+                <input type="checkbox" name="award" data-id="awards" checked>
+                <label for="award">Award</label>
+            </div>
+        </div>
+        <div class="app-body">
+            <div class="resumer-container">
+                <div class="left">
+                    <div id="header">
+                        <h2 class="name">Your Name</h2>
+                        <p class="designation">Your Designation Here</p>
+                    </div>
+                    <div id="personal-details">
+                        <div class="detail" id="email">
+                            <span><i class="fa-solid fa-envelope"></i></span>
+                            <p>xyz@gmail.com</p>
                         </div>
-                        <div class="section-body">
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium corrupti quae vero
-                                in
-                                nulla temporibus quia quidem. Impedit necessitatibus deleniti voluptatibus repellat eius
-                                commodi, doloribus, veniam obcaecati nulla et cupiditate!</p>
+                        <div class="detail" id="email">
+                            <span><i class="fa-solid fa-phone"></i></span>
+                            <p>+92-000-0000000</p>
+                        </div>
+                        <div class="detail" id="email">
+                            <span><i class="fa-solid fa-location-dot"></i></span>
+                            <p>280/11 Pacific coast, highway, California</p>
+                        </div>
+                        <div class="detail" id="email">
+                            <span><i class="fa-brands fa-linkedin-in"></i></span>
+                            <p>linkedin.com/xyz-1234</p>
+                        </div>
+                        <div class="detail" id="email">
+                            <span><i class="fa-solid fa-arrow-pointer"></i></span>
+                            <p>www.xyz.com</p>
                         </div>
                     </div>
-                    <div class="left-sec">
-                        <div class="section-head">
-                            <h2>EXPERIENCE</h2>
+                    <div id="profile">
+                        <div id="profile-head">
+                            <span><i class="fa-solid fa-address-card"></i></span>
+                            <h4>PROFILE</h4>
                         </div>
-                        <div class="section-body">
-                            <div class="experience">
-                                <div class="exp-section">
-                                    <h4>Job Title Here</h4>
-                                </div>
-                                <div class="exp-section">
-                                    <p>Company name here</p>
-                                </div>
-                                <div class="exp-section">
-                                    <p><strong>2016 - Present</strong></p>
-                                </div>
-                                <div class="exp-section">
-                                    <ul>
-                                        <li>Job Description Point # 01</li>
-                                        <li>Job Description Point # 02</li>
-                                        <li>Job Description Point # 03</li>
-                                    </ul>
-                                </div>
+                        <div id="profile-body">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sit at quas fugit
+                                explicabo blanditiis voluptas in minus, commodi amet magni distinctio aliquid eum, nobis
+                                libero impedit? Id, optio voluptatem?</p>
+                        </div>
+                    </div>
+                    <div id="education">
+                        <div id="education-head">
+                            <span><i class="fa-solid fa-graduation-cap"></i></span>
+                            <h4>EDUCATION</h4>
+                        </div>
+                        <div id="education-body">
+                            <div class="education-item">
+                                <h4 id="degree-name">Degree Name Here</h4>
+                                <p id="institute-name">
+                                    Institute Name Here
+                                </p>
+                                <p id="year">Year Here</p>
                             </div>
-                            <div class="experience">
-                                <div class="exp-section">
-                                    <h4>Job Title Here</h4>
-                                </div>
-                                <div class="exp-section">
-                                    <p>Company name here</p>
-                                </div>
-                                <div class="exp-section">
-                                    <p><strong>2016 - Present</strong></p>
-                                </div>
-                                <div class="exp-section">
-                                    <ul>
-                                        <li>Job Description Point # 01</li>
-                                        <li>Job Description Point # 02</li>
-                                        <li>Job Description Point # 03</li>
-                                    </ul>
-                                </div>
+                            <div class="education-item">
+                                <h4 id="degree-name">Degree Name Here</h4>
+                                <p id="institute-name">
+                                    Institute Name Here
+                                </p>
+                                <p id="year">Year Here</p>
                             </div>
-                            <div class="experience">
-                                <div class="exp-section">
-                                    <h4>Job Title Here</h4>
-                                </div>
-                                <div class="exp-section">
-                                    <p>Company name here</p>
-                                </div>
-                                <div class="exp-section">
-                                    <p><strong>2016 - Present</strong></p>
-                                </div>
-                                <div class="exp-section">
-                                    <ul>
-                                        <li>Job Description Point # 01</li>
-                                        <li>Job Description Point # 02</li>
-                                        <li>Job Description Point # 03</li>
-                                    </ul>
-                                </div>
+                        </div>
+                    </div>
+                    <div id="languages">
+                        <div id="languages-head">
+                            <span><i class="fa-solid fa-globe"></i></span>
+                            <h4>LANGUAGES</h4>
+                        </div>
+                        <div id="languages-body">
+                            <div class="language">
+                                <p>English</p>
+                                <span>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                            </div>
+                            <div class="language">
+                                <p>Spanish</p>
+                                <span>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="resume-body-right">
-                    <div class="right-sec">
-                        <div class="contact-body">
-                            <i class="fa fa-phone"></i>
-                            <p>Contact Number</p>
+                <div class="right">
+                    <div id="experience">
+                        <div id="experience-head">
+                            <span><i class="fa-solid fa-briefcase"></i></span>
+                            <h4>PROFESSIONAL EXPERIENCE</h4>
                         </div>
-                        <div class="contact-body">
-                            <i class="fa fa-envelope"></i>
-                            <p>Email Address</p>
-                        </div>
-                        <div class="contact-body">
-                            <i class="fa fa-map-marker"></i>
-                            <p>Address Here</p>
-                        </div>
-                        <div class="contact-body">
-                            <i class="fa fa-globe"></i>
-                            <p>Website Here</p>
-                        </div>
-                    </div>
-                    <div class="right-sec">
-                        <div class="section-head">
-                            <h2>EDUCATION</h2>
-                        </div>
-                        <div class="section-body">
-                            <div class="education">
-                                <div class="ed-section">
-                                    <h4>Degree Name here</h4>
-                                </div>
-                                <div class="ed-section">
-                                    <p>Institute Name Here</p>
-                                </div>
-                                <div class="ed-section">
-                                    <p><strong>Year Here</strong></p>
+                        <div id="experience-body">
+                            <div class="organization">
+                                <h4 id="org-name">Company Name Here</h4>
+                                <p id="designation">Your Designation Here</p>
+                                <p id="year">Working Year Here</p>
+                                <div class="key-points">
+                                    <ul>
+                                        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae autem.</li>
+                                        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae autem.</li>
+                                        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae autem.</li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="education">
-                                <div class="ed-section">
-                                    <h4>Degree Name here</h4>
-                                </div>
-                                <div class="ed-section">
-                                    <p>Institute Name Here</p>
-                                </div>
-                                <div class="ed-section">
-                                    <p><strong>Year Here</strong></p>
+                            <div class="organization">
+                                <h4 id="org-name">Company Name Here</h4>
+                                <p id="designation">Your Designation Here</p>
+                                <p id="year">Working Year Here</p>
+                                <div class="key-points">
+                                    <ul>
+                                        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae autem.</li>
+                                        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae autem.</li>
+                                        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae autem.</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="right-sec">
-                        <div class="section-head">
-                            <h2>SKILLS</h2>
+                    <div id="skills">
+                        <div id="skills-head">
+                            <span><i class="fa-solid fa-code-branch"></i></span>
+                            <h4>SKILLS</h4>
                         </div>
-                        <div class="section-body">
-                            <div class="skills">
-                                <ul>
-                                    <li>Web Design</li>
-                                    <li>Graphic Design</li>
-                                    <li>Microsoft Office</li>
-                                </ul>
+                        <div id="skills-body">
+                            <div class="skill">
+                                <p>Skill # 01</p>
                             </div>
+                            <div class="skill">
+                                <p>Skill # 02</p>
+                            </div>
+                            <div class="skill">
+                                <p>Skill # 03</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="awards">
+                        <div id="awards-head">
+                            <span><i class="fa-solid fa-award"></i></span>
+                            <h4>AWARDS</h4>
+                        </div>
+                        <div id="awards-body">
+                            <div class="award">
+                                <h4>Award Name Here</h4>
+                                <p>Institute Name, Year</p>
+                            </div>
+                            <div class="award">
+                                <h4>Award Name Here</h4>
+                                <p>Institute Name, Year</p>
+                            </div>
+                            <div class="award">
+                                <h4>Award Name Here</h4>
+                                <p>Institute Name, Year</p>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
     </div>
     <script src="app.js"></script>
+    
 </body>
 
 </html>
