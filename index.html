@@ -18,45 +18,293 @@
         </div>
         <div class="section-menu">
             <div class="menu-item">
-                <input type="checkbox" name="language" data-id="languages" checked>
-                <label for="languages">Language</label>
+                <input type="checkbox" name="language" data-id="languages" id="languagesLabel" checked>
+                <label for="languagesLabel">Language</label>
             </div>
             <div class="menu-item">
-                <input type="checkbox" name="skill" data-id="skills" checked>
-                <label for="skill">Skill</label>
+                <input type="checkbox" name="skill" data-id="skills" id="skillLabel" checked>
+                <label for="skillLabel">Skill</label>
             </div>
             <div class="menu-item">
-                <input type="checkbox" name="award" data-id="awards" checked>
-                <label for="award">Award</label>
+                <input type="checkbox" name="award" data-id="awards" id="awardLabel" checked>
+                <label for="awardLabel">Award</label>
             </div>
         </div>
         <div class="app-body">
+            <div class="form-container">
+                <div class="form-section">
+                    <div class="form-header" data-id="profile">
+                        <div class="heading">
+                            <span><i class="fa-solid fa-address-card"></i></span>
+                            <h2>Profile Details</h2>
+                        </div>
+                        <span><i class="fa-solid fa-caret-down"></i></span>
+                    </div>
+                    <div class="form-body" id="profile">
+                        <form action="" id="profile-details">
+                            <div class="form-section">
+                                <label for="">Name : </label>
+                                <input type="text" placeholder="Enter your Name"
+                                    oninput="resumeDetails(this.value,this.dataset.id)" data-id="name" maxlength="25"
+                                    required>
+                            </div>
+                            <div class="form-section">
+                                <label for="">Designation : </label>
+                                <input type="text" oninput="resumeDetails(this.value,this.dataset.id)"
+                                    placeholder="Enter your designation" data-id="designation" maxlength="40" required>
+                            </div>
+                            <div class="form-section">
+                                <label for="">Email Address : </label>
+                                <input type="text" oninput="resumeDetails(this.value,this.dataset.id)"
+                                    placeholder="Enter your Email Address" data-id="emailText" maxlength="20" required>
+                            </div>
+                            <div class="form-section">
+                                <label for="">Phone Number : </label>
+                                <input type="text" oninput="resumeDetails(this.value,this.dataset.id)"
+                                    placeholder="Enter your Phone Number" data-id="phone" maxlength="20" required>
+                            </div>
+                            <div class="form-section">
+                                <label for="">Address : </label>
+                                <input type="text" oninput="resumeDetails(this.value,this.dataset.id)"
+                                    placeholder="Enter your Residential Address" data-id="address" maxlength="50"
+                                    required>
+                            </div>
+                            <div class="form-section">
+                                <label for="">Linkedin : </label>
+                                <input type="text" oninput="resumeDetails(this.value,this.dataset.id)"
+                                    placeholder="Enter your Linkedin Profile" data-id="linkedin" maxlength="20">
+                            </div>
+                            <div class="form-section">
+                                <label for="">Website : </label>
+                                <input type="text" oninput="resumeDetails(this.value,this.dataset.id)"
+                                    placeholder="Enter your Website" data-id="website" maxlength="20">
+                            </div>
+                            <div class="form-section">
+                                <label for="">Tell About Yourself : </label>
+                                <textarea rows="3" oninput="resumeDetails(this.value,this.dataset.id)" name="bio"
+                                    data-id="bio" maxlength="200" required></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <div class="form-header" data-id="education">
+                        <div class="heading">
+                            <span><i class="fa-solid fa-graduation-cap"></i></span>
+                            <h2>Educations</h2>
+                        </div>
+                        <span><i class="fa-solid fa-caret-down"></i></span>
+                    </div>
+                    <div class="form-body" id="education">
+                        <div class="form-fields">
+                            <form action="" id="education-details">
+                                <div>
+                                    <div class="form-section">
+                                        <label for="">Degree Name : </label>
+                                        <input type="text" placeholder="Enter your Degree Name" data-id="degree_name_1"
+                                            maxlength="50" oninput="resumeDetails(this.value,this.dataset.id)" required>
+                                    </div>
+                                    <div class="form-section">
+                                        <label for="">Institute Name : </label>
+                                        <input type="text" placeholder="Enter Institute Name"
+                                            oninput="resumeDetails(this.value,this.dataset.id)"
+                                            data-id="institute_name_1" maxlength="30" required>
+                                    </div>
+                                    <div class="form-section">
+                                        <label for="">Start Year : </label>
+                                        <input type="text" data-id="start_year_1"
+                                            oninput="resumeDetails(this.value,this.dataset.id)" placeholder="Start Year"
+                                            maxlength="4" required>
+                                    </div>
+                                    <div class="form-section">
+                                        <label for="">End Year : </label>
+                                        <input type="text" data-id="end_year_1"
+                                            oninput="resumeDetails(this.value,this.dataset.id)" placeholder="End Year"
+                                            maxlength="4" required>
+                                    </div>
+                                </div>
+                            </form>
+                            <div>
+                                <input type="submit" id="educationBtn" value="Add Education Field">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-section" id="language-section">
+                    <div class="form-header" data-id="language">
+                        <div class="heading">
+                            <span><i class="fa-solid fa-globe"></i></span>
+                            <h2>Languages</h2>
+                        </div>
+                        <span><i class="fa-solid fa-caret-down"></i></span>
+                    </div>
+                    <div class="form-body" id="language">
+                        <div class="form-fields">
+                            <form action="" id="language-details">
+                                <div>
+                                    <div class="form-section">
+                                        <label for="">Language Name : </label>
+                                        <input type="text" oninput="resumeDetails(this.value,this.dataset.id)"
+                                            placeholder="Enter Language Name" data-id="language_1" maxlength="50">
+                                    </div>
+                                    <div class="form-section">
+                                        <label for="">Star Count : </label>
+                                        <input type="number" oninput="resumeDetails(this.value,this.dataset.id)"
+                                            placeholder="Star Count (1-5)" data-id="language_star_1" min="1" max="5">
+                                    </div>
+                                </div>
+                            </form>
+                            <div>
+                                <input type="submit" id="languageBtn" value="Add Languages">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <div class="form-header" data-id="experience">
+                        <div class="heading">
+                            <span><i class="fa-solid fa-briefcase"></i></span>
+                            <h2>Working Experience</h2>
+                        </div>
+                        <span><i class="fa-solid fa-caret-down"></i></span>
+                    </div>
+                    <div class="form-body" id="experience">
+                        <div class="form-fields">
+                            <form action="" id="experience-form">
+                                <div>
+                                    <div class="form-section">
+                                        <label for="">Organization Name : </label>
+                                        <input type="text" oninput="resumeDetails(this.value,this.dataset.id)" placeholder="Enter Company Name" data-id="org_name_1"
+                                            maxlength="30">
+                                    </div>
+                                    <div class="form-section">
+                                        <label for="">Designation : </label>
+                                        <input type="text" oninput="resumeDetails(this.value,this.dataset.id)" placeholder="Enter Designation" data-id="org_designation_1"
+                                            maxlength="30">
+                                    </div>
+                                    <div class="form-section">
+                                        <label for="">Start Year : </label>
+                                        <input type="text" oninput="resumeDetails(this.value,this.dataset.id)" placeholder="Start Year" data-id="org_start_year_1"
+                                            maxlength="30">
+                                    </div>
+                                    <div class="form-section">
+                                        <label for="">End Year : </label>
+                                        <input type="text" oninput="resumeDetails(this.value,this.dataset.id)" placeholder="Current Year" data-id="org_end_year_1"
+                                            maxlength="30">
+                                    </div>
+                                    <div id="keyPoints">
+                                        <div class="form-section">
+                                            <label for="">Key Point # 1 : </label>
+                                            <input type="text" placeholder="Enter Key Points 1" oninput="resumeDetails(this.value,this.dataset.id)" data-id="keyPoint_1_1"
+                                                maxlength="80">
+                                        </div>
+                                        <div class="form-section">
+                                            <label for="">Key Point # 2 : </label>
+                                            <input type="text" placeholder="Enter Key Points 2" oninput="resumeDetails(this.value,this.dataset.id)" data-id="keyPoint_1_2"
+                                                maxlength="80">
+                                        </div>
+                                        <div class="form-section">
+                                            <label for="">Key Point # 3 : </label>
+                                            <input type="text" placeholder="Enter Key Points 3" oninput="resumeDetails(this.value,this.dataset.id)" data-id="keyPoint_1_3"
+                                                maxlength="80">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div>
+                                <input type="submit" id="experienceBtn" value="Add Work Experience">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-section" id="skill-section">
+                    <div class="form-header" data-id="skill">
+                        <div class="heading">
+                            <span><i class="fa-solid fa-code-branch"></i></span>
+                            <h2>Skills</h2>
+                        </div>
+                        <span><i class="fa-solid fa-caret-down"></i></span>
+                    </div>
+                    <div class="form-body" id="skill">
+                        <div class="form-fields">
+                            <form action="" id="skill-details">
+                                <div>
+                                    <div class="form-section">
+                                        <label for="">Skill Name : </label>
+                                        <input type="text" oninput="resumeDetails(this.value,this.dataset.id)"
+                                            placeholder="Enter Skill" data-id="skill_1" maxlength="50">
+                                    </div>
+                                </div>
+                            </form>
+                            <div>
+                                <input type="submit" id="skillBtn" value="Add Skill">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-section" id="award-section">
+                    <div class="form-header" data-id="award">
+                        <div class="heading">
+                            <span><i class="fa-solid fa-award"></i></span>
+                            <h2>Awards</h2>
+                        </div>
+                        <span><i class="fa-solid fa-caret-down"></i></span>
+                    </div>
+                    <div class="form-body" id="award">
+                        <div class="form-fields">
+                            <form action="" id="award-details">
+                                <div>
+                                    <div class="form-section">
+                                        <label for="">Award Name : </label>
+                                        <input type="text" oninput="resumeDetails(this.value,this.dataset.id)"
+                                            placeholder="Enter Award" data-id="award_1" maxlength="50">
+                                    </div>
+                                    <div class="form-section">
+                                        <label for="">Organization Name : </label>
+                                        <input type="text" oninput="resumeDetails(this.value,this.dataset.id)"
+                                            placeholder="Enter Organization" data-id="awardOrg_1" maxlength="50">
+                                    </div>
+                                    <div class="form-section">
+                                        <label for="">Year : </label>
+                                        <input type="text" oninput="resumeDetails(this.value,this.dataset.id)"
+                                            placeholder="Enter Year" data-id="year_1" maxlength="50">
+                                    </div>
+                                </div>
+                            </form>
+                            <div>
+                                <input type="submit" id="awardBtn" value="Add Award">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
             <div class="resumer-container">
                 <div class="left">
                     <div id="header">
-                        <h2 class="name">Your Name</h2>
-                        <p class="designation">Your Designation Here</p>
+                        <h2 class="name" id="name">Your Name</h2>
+                        <p class="designation" id="designation">Your Designation Here</p>
                     </div>
                     <div id="personal-details">
-                        <div class="detail" id="email">
+                        <div class="detail">
                             <span><i class="fa-solid fa-envelope"></i></span>
-                            <p>xyz@gmail.com</p>
+                            <p id="emailText">xyz@gmail.com</p>
                         </div>
-                        <div class="detail" id="email">
+                        <div class="detail">
                             <span><i class="fa-solid fa-phone"></i></span>
-                            <p>+92-000-0000000</p>
+                            <p id="phone">+92-000-0000000</p>
                         </div>
-                        <div class="detail" id="email">
+                        <div class="detail" id="add">
                             <span><i class="fa-solid fa-location-dot"></i></span>
-                            <p>280/11 Pacific coast, highway, California</p>
+                            <p id="address">280/11 Pacific coast, highway, California</p>
                         </div>
-                        <div class="detail" id="email">
+                        <div class="detail">
                             <span><i class="fa-brands fa-linkedin-in"></i></span>
-                            <p>linkedin.com/xyz-1234</p>
+                            <p id="linkedin">linkedin.com/xyz-1234</p>
                         </div>
-                        <div class="detail" id="email">
+                        <div class="detail">
                             <span><i class="fa-solid fa-arrow-pointer"></i></span>
-                            <p>www.xyz.com</p>
+                            <p id="website">www.xyz.com</p>
                         </div>
                     </div>
                     <div id="profile">
@@ -65,7 +313,8 @@
                             <h4>PROFILE</h4>
                         </div>
                         <div id="profile-body">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sit at quas fugit
+                            <p id="bio">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sit at quas
+                                fugit
                                 explicabo blanditiis voluptas in minus, commodi amet magni distinctio aliquid eum, nobis
                                 libero impedit? Id, optio voluptatem?</p>
                         </div>
@@ -77,18 +326,13 @@
                         </div>
                         <div id="education-body">
                             <div class="education-item">
-                                <h4 id="degree-name">Degree Name Here</h4>
-                                <p id="institute-name">
+                                <h4 id="degree_name_1">Degree Name Here</h4>
+                                <p id="institute_name_1">
                                     Institute Name Here
                                 </p>
-                                <p id="year">Year Here</p>
-                            </div>
-                            <div class="education-item">
-                                <h4 id="degree-name">Degree Name Here</h4>
-                                <p id="institute-name">
-                                    Institute Name Here
+                                <p id="year"><span id="start_year_1">Start</span> -
+                                    <span id="end_year_1">End</span>
                                 </p>
-                                <p id="year">Year Here</p>
                             </div>
                         </div>
                     </div>
@@ -99,18 +343,8 @@
                         </div>
                         <div id="languages-body">
                             <div class="language">
-                                <p>English</p>
-                                <span>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </span>
-                            </div>
-                            <div class="language">
-                                <p>Spanish</p>
-                                <span>
+                                <p id="language_1">Language</p>
+                                <span id="language_star_1">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -129,26 +363,18 @@
                         </div>
                         <div id="experience-body">
                             <div class="organization">
-                                <h4 id="org-name">Company Name Here</h4>
-                                <p id="designation">Your Designation Here</p>
-                                <p id="year">Working Year Here</p>
-                                <div class="key-points">
+                                <h4 id="org_name_1">Company Name Here</h4>
+                                <p id="org_designation_1">Your Designation Here</p>
+                                <p id="year"><span id="org_start_year_1">Start Year</span> - <span id="org_end_year_1">End Year</span></p>
+                                <div class="key-points" id="key-points">
                                     <ul>
-                                        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae autem.</li>
-                                        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae autem.</li>
-                                        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae autem.</li>
+                                        <li id="keyPoint_1_1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae autem.</li>
                                     </ul>
-                                </div>
-                            </div>
-                            <div class="organization">
-                                <h4 id="org-name">Company Name Here</h4>
-                                <p id="designation">Your Designation Here</p>
-                                <p id="year">Working Year Here</p>
-                                <div class="key-points">
                                     <ul>
-                                        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae autem.</li>
-                                        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae autem.</li>
-                                        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae autem.</li>
+                                        <li id="keyPoint_1_2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae autem.</li>
+                                    </ul>
+                                    <ul>
+                                        <li id="keyPoint_1_3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae autem.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -161,13 +387,7 @@
                         </div>
                         <div id="skills-body">
                             <div class="skill">
-                                <p>Skill # 01</p>
-                            </div>
-                            <div class="skill">
-                                <p>Skill # 02</p>
-                            </div>
-                            <div class="skill">
-                                <p>Skill # 03</p>
+                                <p id="skill_1">Skill # 01</p>
                             </div>
                         </div>
                     </div>
@@ -178,18 +398,10 @@
                         </div>
                         <div id="awards-body">
                             <div class="award">
-                                <h4>Award Name Here</h4>
-                                <p>Institute Name, Year</p>
+                                <h4 id="award_1">Award Name Here</h4>
+                                <p id="awardOrg_1" style="display: inline-block;">Institute Name</p>,
+                                <span id="year_1">Year</span>
                             </div>
-                            <div class="award">
-                                <h4>Award Name Here</h4>
-                                <p>Institute Name, Year</p>
-                            </div>
-                            <div class="award">
-                                <h4>Award Name Here</h4>
-                                <p>Institute Name, Year</p>
-                            </div>
-                            
                         </div>
                     </div>
                 </div>
@@ -199,7 +411,7 @@
 
     </div>
     <script src="app.js"></script>
-    
+
 </body>
 
 </html>

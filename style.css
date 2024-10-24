@@ -52,7 +52,99 @@ body {
 
     & .app-body {
         display: flex;
-        justify-content: center;
+
+        & .form-container {
+            width: 40%;
+            margin: 20px 10px 20px 10px;
+
+            & .form-section {
+                margin: 0 0 20px 0;
+
+                & .form-header {
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    background-color: white;
+                    padding: 10px 15px;
+                    box-shadow: 0 0 5px #b6b6b6;
+                    border-radius: 10px;
+                    text-align: center;
+
+                    & span i {
+                        transform: rotate(0deg);
+                        transition: 0.2s all;
+                    }
+
+                    & .heading {
+                        display: flex;
+                        align-items: center;
+
+                        & h2 {
+                            margin-left: 10px;
+                        }
+                    }
+                }
+
+                & .form-body {
+                    background-color: white;
+                    padding: 15px;
+                    margin: 20px 0 0 0;
+                    display: none;
+
+                    & input[type=submit] {
+                        background-color: #313F5F;
+                        border: none;
+                        color: white;
+                        padding: 10px;
+                        text-transform: uppercase;
+                    }
+
+                    & .form-section {
+                        display: flex;
+                        align-items: center;
+                        margin: 15px 0;
+
+                        & label {
+                            font-weight: bold;
+                            font-size: 16px;
+                        }
+
+                        & input {
+                            flex: 1;
+                            margin-left: 10px;
+                            font-size: 16px;
+                            padding: 5px;
+                        }
+
+                        & textarea {
+                            flex: 1;
+                            margin-left: 10px;
+                            font-size: 16px;
+                            padding: 5px;
+                        }
+
+                    }
+
+                    & .add-form {
+                        & button {
+                            background-color: #313F5F;
+                            color: white;
+                            padding: 10px;
+                            border-radius: 5px;
+                            border: 1px solid transparent;
+                            transition: 0.5s all;
+                        }
+
+                        & button:hover {
+                            background-color: white;
+                            color: #313F5F;
+                            border: 1px solid #313F5F;
+                        }
+                    }
+                }
+            }
+        }
 
         & .resumer-container {
             display: flex;
@@ -61,7 +153,6 @@ body {
             box-shadow: 0 0 5px #b6b6b6;
             margin: 10px 20px 20px 10px;
             background-color: white;
-
             & .left {
                 display: flex;
                 flex-direction: column;
@@ -81,7 +172,7 @@ body {
                 & #personal-details {
                     margin: 0 0 20px 0;
 
-                    & #email {
+                    & #add {
                         align-items: start;
                     }
 
@@ -202,6 +293,7 @@ body {
             & .right {
                 padding: 30px;
                 width: 60%;
+                height: 100%;
 
                 & #experience {
 
@@ -260,15 +352,15 @@ body {
 
                     & #skills-body {
                         margin: 20px 0 0 0;
-
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
                         & .skill {
-                            display: inline-block;
                             background-color: #F15D67;
                             padding: 10px;
                             color: white;
                             border-radius: 5px;
-                            margin: 5px 0 5px 0;
-
+                            margin: 5px 0 5px 5px;
                             & p {
                                 font-size: 15px;
                             }
@@ -315,9 +407,16 @@ body {
 
         & .app-body {
             justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 10px;
 
+            & .form-container{
+                width: 100%;
+            }
             & .resumer-container {
                 width: 100%;
+                height: 100%;
                 margin: 10px 20px 20px 20px;
             }
         }
@@ -335,15 +434,15 @@ body {
         }
 
         & .app-body {
-            flex-direction: column;
-            align-items: center;
-            padding: 0 10px;
+
             & .resumer-container {
                 flex-direction: column;
                 margin: 20px 0;
+
                 & .left {
                     width: 100%;
                 }
+
                 & .right {
                     width: 100%;
                 }
@@ -357,6 +456,24 @@ body {
         & .app-body {
             & .resumer-container {
                 align-items: center;
+            }
+            & .form-container{
+                & .form-section{
+                    & .form-body{
+                        & .form-section{
+                            flex-direction: column;
+                            align-items: start;
+                            & input{
+                                margin: 5px 0;
+                                width: 100%;
+                            }
+                            & textarea{
+                                margin: 5px 0;
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
